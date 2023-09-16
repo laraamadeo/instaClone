@@ -18,7 +18,7 @@ export default function updateEmail(email, newEmail, confirmNewEmail, callback) 
 
     const data = { email, newEmail }
 
-    return fetch('http://localhost:4000/users/email', {
+    return fetch('https://api-instaclone.onrender.com/users/email', {
         method: 'PATCH',
         headers: {
             'Content-type': 'application/json',

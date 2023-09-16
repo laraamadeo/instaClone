@@ -1,7 +1,7 @@
 import { context } from "./context";
 
 export default function retrieveSavedPosts() {
-    return fetch('http://localhost:4000/posts/saved', {
+    return fetch('https://api-instaclone.onrender.com/posts/saved', {
         method: 'GET',
         headers: {
             'Content-type': 'application/json',

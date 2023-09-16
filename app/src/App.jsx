@@ -36,10 +36,6 @@ export default function App() {
       <Route path='/profile' element={<Profile />} />
       <Route path='/settings' element={<Settings onSidebarUpdates={updateSidebarRender} />
       } />
-      {/*       
-      {view === 'login' && <Login onSignUpLink={handleGoToRegister} onLoginButton={handleGoToHome} />}
-      {view === 'register' && <Register onLogInLink={handleGoToLogin} onSignUpButton={handleGoToLogin} />}
-      {view === 'home' && <Home onLogOutLink={handleGoToLogin} />} */}
     </Routes>
     {toast && <Toast message={toast.message} type={toast.type} length={toast.length} endAnimation={handleRemoveToast} />}
     {loader && <Spinner overlay={loader.overlay} background={loader.background} />}

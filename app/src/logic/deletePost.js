@@ -8,7 +8,7 @@
 import { context } from "./context";
 
 export default function deletePost(postId) {
-    return fetch(`http://localhost:4000/posts/delete/${postId}`, {
+    return fetch(`https://api-instaclone.onrender.com/posts/delete/${postId}`, {
         method: 'DELETE',
         headers: {
             'Content-type': 'application/json',

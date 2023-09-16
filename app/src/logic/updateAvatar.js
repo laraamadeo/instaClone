@@ -15,7 +15,7 @@ export function updateAvatar(token, url, callback) {
 
     const data = { avatar: url }
 
-    return fetch('http://localhost:4000/users/avatar', {
+    return fetch('https://api-instaclone.onrender.com/users/avatar', {
         method: 'PATCH',
         headers: {
             'Content-type': 'application/json',

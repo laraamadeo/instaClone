@@ -10,7 +10,7 @@ import { context } from "./context";
 
 export default function retrievePost(postId) {
 
-    return fetch(`http://localhost:4000/posts/post/${postId}`, {
+    return fetch(`https://api-instaclone.onrender.com/posts/post/${postId}`, {
         method: 'GET',
         headers: {
             'Content-type': 'application/json',

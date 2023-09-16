@@ -13,7 +13,7 @@ export default function updatePost(postId, image, text) {
     const data = { image, text }
 
 
-    return fetch(`http://localhost:4000/posts/update/${postId}`, {
+    return fetch(`https://api-instaclone.onrender.com/posts/update/${postId}`, {
         method: 'PATCH',
         headers: {
             'Content-type': 'application/json',

@@ -10,7 +10,7 @@ import { context } from "./context";
 //toggle rename -> toggleSavePost
 export default function toggleSavePost(postId, token) {
 
-    return fetch(`http://localhost:4000/posts/save/${postId}`, {
+    return fetch(`https://api-instaclone.onrender.com/posts/save/${postId}`, {
         method: 'PATCH',
         headers: {
             'Content-type': 'application/json',

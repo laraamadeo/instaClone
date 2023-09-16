@@ -22,7 +22,7 @@ export default function sellPost(postId, actualPrice, newPrice) {
 
     const price = { newPrice }
 
-    return fetch(`http://localhost:4000/posts/price/${postId}`, {
+    return fetch(`https://api-instaclone.onrender.com/posts/price/${postId}`, {
         method: 'PATCH',
         headers: {
             'Content-type': 'application/json',

@@ -15,7 +15,7 @@ export const loginUser = (email, password) => {
     const credentials = { email, password }
 
 
-    return fetch('http://localhost:4000/users/auth', {
+    return fetch('https://api-instaclone.onrender.com/users/auth', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'

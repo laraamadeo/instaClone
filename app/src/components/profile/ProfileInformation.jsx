@@ -10,26 +10,28 @@ export default function ProfileInformation() {
 
     const [user, setUser] = useState()
     const [posts, setPosts] = useState()
+    const [postsNumber, setPostsNumber] = useState()
     const { generateToast, freeze, unfreeze } = useContext(Context)
 
     useEffect(() => {
-        try {
-            freeze()
-            Promise.all([retrieveUser(), retrievePosts()])
-                .then(([{ user }, { posts }]) => {
-                    setUser(user)
-                    setPosts(posts)
-                    unfreeze()
-                })
-                .catch(error => {
-                    generateToast(error.message, 'error')
-                    unfreeze()
-                })
-        }
-        catch (error) {
-            generateToast(error.message, 'error')
-            console.log(error.stack)
-        }
+        (async () => {
+            try {
+                freeze()
+                const user = await retrieveUser()
+                const { posts } = await retrievePosts()
+
+                setUser(user)
+                setPosts(posts)
+                setPostsNumber(posts.reduce((num, post) => (post.author.id === userId ? num + 1 : num), 0))
+                unfreeze()
+
+            }
+            catch (error) {
+                generateToast(error.message, 'error')
+                console.log(error.stack)
+            }
+
+        })()
     }, [])
 
     const userId = extractSubFromToken(context.token)
@@ -45,7 +47,7 @@ export default function ProfileInformation() {
             <div className="w-full flex justify-between">
                 <div className="flex gap-[4px]">
                     {posts && <>
-                        <p className="body-text-bold">{posts.reduce((num, post) => (post.author.id === userId ? num + 1 : num), 0)}</p>
+                        <p className="body-text-bold">{postsNumber}</p>
                     </>}
                     <p className="body-text">posts</p>
                 </div>

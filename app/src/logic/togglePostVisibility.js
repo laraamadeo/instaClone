@@ -2,7 +2,7 @@ import { context } from "./context";
 
 
 export default function togglePostVisibility(postId) {
-    return fetch(`http://localhost:4000/posts/visibility/${postId}`, {
+    return fetch(`https://api-instaclone.onrender.com/posts/visibility/${postId}`, {
         method: 'PATCH',
         headers: {
             'Content-type': 'application/json',

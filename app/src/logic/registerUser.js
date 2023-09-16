@@ -21,7 +21,7 @@ export const registerUser = (username, email, password, repPassword) => {
 
     const user = { username, email, password }
 
-    return fetch('http://localhost:4000/users', {
+    return fetch('https://api-instaclone.onrender.com/users', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'

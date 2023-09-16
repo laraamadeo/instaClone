@@ -19,7 +19,7 @@ export const updatePassword = (password, newPassword, confirmNewPassword) => {
 
     const data = { password, newPassword }
 
-    return fetch('http://localhost:4000/users/password', {
+    return fetch('https://api-instaclone.onrender.com/users/password', {
         method: 'PATCH',
         headers: {
             'Content-type': 'application/json',

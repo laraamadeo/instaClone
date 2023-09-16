@@ -11,7 +11,7 @@ import { context } from "./context"
 export default function createPost(image, text) {
     const data = { image, text }
 
-    return fetch('http://localhost:4000/posts/new', {
+    return fetch('https://api-instaclone.onrender.com/posts/new', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',

@@ -15,11 +15,11 @@
     margin: 0px;
     color: var(--white);
     background-color: #032882;
-    animation: toastIt 300000ms cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
+    animation: toastIt 800ms cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
     box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.15);
     padding: 12px 16px 12px 16px;
     border-radius: 12px;
-    animation-duration: 30000ms;
+    animation-duration: 2000ms;
 }
 
 .error-toast {
